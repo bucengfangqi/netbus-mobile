@@ -181,11 +181,11 @@ const routes = [{
   //   name: 'miselectronic',
   //   component: () => import('../views/miselectronic.vue')
   // }, 
-  // {
-  //   path: '/activity',
-  //   name: 'activity',
-  //   component: () => import('../views/activity.vue')
-  // },
+  {
+    path: '/activity',
+    name: 'activity',
+    component: () => import('../views/activity.vue')
+  },
 ]
 
 const router = new VueRouter({

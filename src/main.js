@@ -5,6 +5,7 @@ import store from './store'
 
 import "./plugins/vant";
 import "./plugins/axios";
+import "@/assets/lib/style.css";
 
 Vue.config.productionTip = false
 
