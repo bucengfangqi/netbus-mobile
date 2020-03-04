@@ -514,12 +514,10 @@
     </div>
     <div class="itemWrap">
       <ul class="itemslist">
-        <template v-for="m in menus">
-          <li @click="serviceType(m)" :key="m.id" v-if="m.pno == null && m.menuclass != 'HIDE'">
-            <img :src="require('@/assets/images/'+m.icon+'.png')" alt />
-            <p class="itemsText">{{m.menuname}}</p>
-          </li>
-        </template>
+        <li v-for="m in menus" @click="serviceType(m)" :key="m.id" v-if="m.pno == null && m.menuclass != 'HIDE'">
+          <img :src="require('@/assets/images/'+m.icon+'.png')" alt />
+          <p class="itemsText">{{m.menuname}}</p>
+        </li>
       </ul>
       <div class="help">
         <template v-if="this.$store.state.setting&&this.$store.state.setting.value == 1">
@@ -745,6 +743,7 @@ export default {
   components: {},
   data() {
     return {
+      label:null,
       isScorl: false, //用户协议出现的时候，禁止后面页面滚动，false没出现，true 出现
       agreement: false,
       top: '',
@@ -795,8 +794,7 @@ export default {
       urlHh: '', //二维码扫描户号
       fDataJson: {}, //全局配置
       activityArray: [], //活动数组
-      busHandleBeforeRemind: {}, //控制先弹出空户须知还是绑定用户以及欠费检查
-      label:null
+      busHandleBeforeRemind: {} //控制先弹出空户须知还是绑定用户以及欠费检查
     }
   },
   computed: {
@@ -2051,9 +2049,9 @@ export default {
           this.$http
             .get('/mobile/menu/getMenu?source=' + source)
             .then(function(response) {
-              if (response.status == 1) {
-                this.menus = response.mapItems.busMenus
-                this.$store.commit('setmenus', response.mapItems.busMenus)
+              if (response.body.status == 1) {
+                this.menus = response.body.mapItems.busMenus
+                this.$store.commit('setmenus', response.body.mapItems.busMenus)
               }
             })
         }

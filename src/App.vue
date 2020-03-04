@@ -37,8 +37,8 @@
 </template>
 
 <script>
+import wx from 'weixin-js-sdk'
 import { logService } from './plugins/logservice'
-import wx from "weixin-js-sdk";
 export default {
   data() {
     return {
@@ -85,16 +85,16 @@ export default {
     },
     getInfo() {
       //全局配置获取到了，才执行info
-      this.$http.post('/mobile/info').then((response)=> {
-        if (response.status == 1) {
-          this.$store.commit('setatcRecords', response.mapItems.atcRecords)
-          this.source = response.mapItems.source
-          this.map = response.mapItems.map
-          this.$store.commit('setMapItems', response.mapItems)
-          if (response.mapItems.user != null) {
+      this.$http.post('/mobile/info').then(function(response) {
+        if (response.body.status == 1) {
+          this.$store.commit('setatcRecords', response.body.mapItems.atcRecords)
+          this.source = response.body.mapItems.source
+          this.map = response.body.mapItems.map
+          this.$store.commit('setMapItems', response.body.mapItems)
+          if (response.body.mapItems.user != null) {
             this.$store.commit(
               'setdefaultkey',
-              response.mapItems.user.defaultkey
+              response.body.mapItems.user.defaultkey
             )
 					}
           this.$store.commit('setaddress', this.fDataJson.address)
@@ -104,19 +104,19 @@ export default {
           this.$store.commit('setSms', this.map.smslink)
           this.$store.commit('setcompanyCode', this.fDataJson.companyCode)
 
-          if (response.mapItems.cstUserChannel != null) {
+          if (response.body.mapItems.cstUserChannel != null) {
             this.$store.commit(
               'setCustid',
-              response.mapItems.cstUserChannel.custid
+              response.body.mapItems.cstUserChannel.custid
             )
-            this.$store.commit('setactivitys', response.mapItems.activitys)
-            this.$store.commit('setBinders', response.mapItems.binders)
+            this.$store.commit('setactivitys', response.body.mapItems.activitys)
+            this.$store.commit('setBinders', response.body.mapItems.binders)
             this.$store.commit('setBinder', null) //清空选中户号
             this.$store.commit(
               'setcstUserChannel',
-              response.mapItems.cstUserChannel
+              response.body.mapItems.cstUserChannel
             )
-            this.$store.commit('setPhone', response.mapItems.user.phone)
+            this.$store.commit('setPhone', response.body.mapItems.user.phone)
           }
           var bgimgsArrays = []
           let imgs = this.fDataJson.bgName.split(',')
@@ -133,7 +133,7 @@ export default {
             bgimgsArrays.push(img)
           }
           this.$store.commit('setbgimgsArray', bgimgsArrays)
-          this.$store.commit('setParams', response.mapItems.map)
+          this.$store.commit('setParams', response.body.mapItems.map)
           //获取表单页面底部文字配置
           let recordParams = ''
           if (this.fDataJson && this.fDataJson.information) {
@@ -170,24 +170,24 @@ export default {
               this.$store.commit('setshowRecords', recordParams[0])
             }
           }
-          if (response.mapItems.binders != null) {
+          if (response.body.mapItems.binders != null) {
             if (!this.$store.state.binder) {
               //当前选择户号
               if (
-                response.mapItems.binders.length > 1 &&
+                response.body.mapItems.binders.length > 1 &&
                 this.$store.state.defaultkey != null
               ) {
-                response.mapItems.binders.forEach(element => {
+                response.body.mapItems.binders.forEach(element => {
                   if (this.$store.state.defaultkey == element.hh) {
                     this.binder = element
                   }
                   if (!this.binder) {
                     //默认户号不存在
-                    this.binder = response.mapItems.binders[0]
+                    this.binder = response.body.mapItems.binders[0]
                   }
                 })
               } else {
-                this.binder = response.mapItems.binders[0]
+                this.binder = response.body.mapItems.binders[0]
               }
               this.$store.commit('setBinder', this.binder)
             }
@@ -197,11 +197,12 @@ export default {
         }
         let source = sessionStorage.getItem('source', source)
         if (source) {
-          this.$http.get('/mobile/menu/getMenu?source=' + source)
-            .then((response)=>{
-              if (response.status == 1) {
-                this.menus = response.mapItems.busMenus
-                this.$store.commit('setmenus', response.mapItems.busMenus)
+          this.$http
+            .get('/mobile/menu/getMenu?source=' + source)
+            .then(function(response) {
+              if (response.body.status == 1) {
+                this.menus = response.body.mapItems.busMenus
+                this.$store.commit('setmenus', response.body.mapItems.busMenus)
                 this.isEntry = true
               }
             })
@@ -309,14 +310,14 @@ export default {
     this.fDataJson = window.fDataJson
     this.$store.commit('setglobalSet', window.fDataJson)
     this.$http.post('/index/info?path=' + companyid[1]).then(response => {
-      if (response.status == 1) {
-        if (response.content) {
+      if (response.body.status == 1) {
+        if (response.body.content) {
           this.$store.commit(
             'setglobalSet',
-            JSON.parse(response.content.setting)
+            JSON.parse(response.body.content.setting)
           )
-          sessionStorage.setItem('companyid', response.content.companyid)
-          sessionStorage.setItem('globalSet', response.content.setting)
+          sessionStorage.setItem('companyid', response.body.content.companyid)
+          sessionStorage.setItem('globalSet', response.body.content.setting)
           this.fDataJson = JSON.parse(sessionStorage.getItem('globalSet'))
           window.fDataJson = this.fDataJson
           document.title = window.fDataJson.title
@@ -350,8 +351,8 @@ export default {
       }
     }
     this.$http.post('/weixin/getJsapi?url=' + url).then(res => {
-      if (res.status != '1') return
-      let app = res.content
+      if (res.body.status != '1') return
+      let app = res.body.content
       if (app) {
         wx.config({
           debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。

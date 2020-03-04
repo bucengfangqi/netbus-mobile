@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 import "./plugins/vant";
-import "./plugins/axios";
+import "./plugins/vueResource";
 import "@/assets/lib/style.css";
 import "@/assets/config/changeTitle.js";
 

@@ -16,21 +16,21 @@
         "/config": {
           target: 'http://192.168.49.184/app/'
         },
-        "/mobile": {
-          target: 'http://192.168.49.184/netbus'
-        },
-        "/sysparam": {
-          target: 'http://192.168.49.184/netbus'
-        },
-        "/index": {
-          target: 'http://192.168.49.184/netbus'
-        },
-        "/log/info": {
-          target: 'http://192.168.49.184/netbus'
-        },
-        "/weixin/getJsapi": {
-          target: 'http://192.168.49.184/netbus'
-        }
+        // "/mobile": {
+        //   target: 'http://192.168.49.184/netbus'
+        // },
+        // "/sysparam": {
+        //   target: 'http://192.168.49.184/netbus'
+        // },
+        // "/index": {
+        //   target: 'http://192.168.49.184/netbus'
+        // },
+        // "/log/info": {
+        //   target: 'http://192.168.49.184/netbus'
+        // },
+        // "/weixin/getJsapi": {
+        //   target: 'http://192.168.49.184/netbus'
+        // }
       }
     },
     // vw适配
