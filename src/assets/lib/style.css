@@ -1,0 +1,1103 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+input {
+    outline: none;
+}
+
+ul,
+li,
+p,
+html,
+body,
+a,
+img,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: "Microsoft Yahei", sans-serif, Verdana;
+    font-size: 0.875rem;
+    color: #7f8c8d;
+    background-color: #fff;
+    width: 100%;
+}
+
+img {
+    max-width: 100% !important;
+    vertical-align: middle;
+    max-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clear:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clear {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.blue {
+    background: url("../img/bluebg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/*春节风格，使用时去掉注释*/
+
+
+/*----------
+  .floorDiv{
+    background-image: url('../img/floorDivBg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: scroll;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  */
+
+#main {
+    min-height: 100%;
+    /* background: #f3f3f3; */
+}
+
+.bgf3 {
+    width: 100%;
+    position: absolute;
+    min-height: 100%;
+}
+
+.leftPigImg {
+    /* background: url('../img/leftPig.png') no-repeat; */
+    background-size: 100% 100%;
+}
+
+.rightPigImg {
+    /* background: url('../img/rightPig.png') no-repeat; */
+    background-size: 100% 100%;
+}
+
+
+/*----------*/
+
+.title {
+    display: block;
+    text-align: center;
+    line-height: 3.5rem;
+    color: #fff;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    margin: 0 3%;
+    padding: 0 6%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 3rem;
+}
+
+.tipsbox {
+    padding: 1.1rem 4%;
+    display: block;
+    width: 100%;
+    color: #fff;
+}
+
+.tipsbox li {
+    display: block;
+    line-height: 2rem;
+    color: #fff;
+    /*color: #080000;*/
+    /* 春节风格，使用时去掉该注释。原来的color加上注释*/
+}
+
+.tipsbox li i {
+    width: 7%;
+    display: inline-block;
+}
+
+.tipsbox li img {
+    height: 1.6rem;
+}
+
+.tipsbox li h2 {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: -1.5rem 0 0;
+    font-weight: 500;
+}
+
+.line {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    line-height: 4rem;
+    text-align: center;
+    color: #fff;
+}
+
+.swiper-container {
+    width: 100%;
+    display: block;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.total {
+    display: block;
+    margin: 0;
+    line-height: 1.2em;
+    height: 3.85rem;
+}
+
+.total div {
+    float: left;
+    width: 33.33%;
+    padding: 0.87rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+.total div.bl {
+    background-color: #2658ff;
+}
+
+.total div.orange {
+    background-color: #ffab00;
+}
+
+.total div.green {
+    background-color: #2cc692;
+}
+
+.total div b {
+    display: block;
+    font-weight: normal;
+}
+
+.tips {
+    line-height: 3;
+    color: #717171;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0 3%;
+    display: block;
+}
+
+.itemslist {
+    float: left;
+    padding-bottom: 5%;
+    width: 100%;
+    min-height: 20rem;
+    margin-top: 1rem;
+}
+
+.itemslist li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    height: 3.5rem;
+}
+
+.itemslist li img {
+    display: block;
+    height: 2rem;
+    margin: 0 auto;
+}
+
+.itemslist li a {
+    text-decoration: none;
+    color: #252525;
+    line-height: 2;
+}
+
+.help {
+    padding: 3%;
+    color: #989898;
+    width: 100%;
+    float: left;
+}
+
+.help a i {
+    color: #2658ff;
+    font-size: 1.5rem;
+}
+
+.help .fr b {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.foot {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+    /* top: calc(100%-62px); */
+    background-color: #4097f8;
+    /*background-color: #FF0000;*/
+    /* 春节风格，使用时去掉该注释。原来的background-color加上注释*/
+    color: #fff;
+    padding: 0.6rem 2% 0.2rem;
+}
+
+.foot li.twoLi {
+    float: left;
+    width: 49%;
+}
+
+.foot li {
+    /* border-right: 1px solid rgba(255, 255, 255, 1); */
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.lineRight {
+    width: 1px;
+    height: 2.3rem;
+    background: #fff;
+    float: left;
+}
+
+.foot li img {
+    height: 1.5rem;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.foot li a {
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.foot li:last-child {
+    border-right: 0;
+}
+
+
+/*我的档案*/
+
+.bgf3 {
+    background-color: #f3f3f3;
+}
+
+.da-bg {
+    background: url("../img/danganbg.jpg") no-repeat #f3f3f3;
+    background-size: 100% auto;
+}
+
+.title i.fl {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+.da-information {
+    margin: 1.2rem 4%;
+    display: block;
+}
+
+.da-information li {
+    line-height: 2;
+    color: #fff;
+}
+
+.da-information li i {
+    width: 7%;
+    display: inline-block;
+}
+
+.da-information li img {
+    height: 1.6rem;
+}
+
+.da-information p {
+    display: inline-block;
+    width: 90%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.da-information span {
+    letter-spacing: 2px;
+}
+
+.da-list {
+    display: block;
+    margin: 5rem 0 1rem;
+}
+
+.da-list li {
+    display: block;
+    background-color: #fff;
+    padding: 0.7rem 3%;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.da-list li img {
+    height: 3rem;
+    margin-right: 0.8rem;
+}
+
+.zd-list {
+    display: block;
+    margin-top: 12rem;
+}
+
+.zd-list h4 {
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 0px rgba(6, 0, 1, 0.11);
+    color: #252525;
+    padding-left: 3%;
+    line-height: 3;
+}
+
+.zd-list ul {
+    margin: 0.5rem 0;
+}
+
+.zd-list li {
+    border-left: 0.6rem solid #f3f3f3;
+    display: block;
+    line-height: 3;
+    margin-bottom: 0.5rem;
+    padding: 0 5% 0 10%;
+}
+
+.zd-list li label {
+    display: block;
+    width: 100%;
+}
+
+.zd-list li label span {
+    float: right;
+    line-height: 2.4;
+}
+
+.zd-list li.current {
+    border-left: 0.6rem solid #4b79cd;
+    background-color: #bee0f2;
+}
+
+.chooseAll {
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0.6rem 5%;
+    text-align: right;
+    vertical-align: bottom;
+    padding-bottom: 1rem;
+}
+
+.sum {
+    display: block;
+    text-align: right;
+    margin-top: 2rem;
+    color: #0083e1;
+    margin: 1rem 5% 0;
+}
+
+.sum span {
+    font-size: 1.8rem;
+}
+
+.Reminder {
+    background-color: #cdf0ff;
+    display: block;
+    padding: 1rem 3%;
+    line-height: 2;
+    color: #0084c2;
+    margin-top: 1rem;
+}
+
+.paybtn {
+    float: right;
+    background: url("../img/jiesuan-bg.png") no-repeat;
+    background-size: auto 3rem;
+    color: #fff;
+    padding-left: 0.5rem;
+    border: 0;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    width: 10rem;
+    margin-top: 1rem;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+label input[type="checkbox"]+span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+label input[type="checkbox"]+span i {
+    font-size: 1.8rem;
+    color: #999;
+}
+
+label input[type="checkbox"]:checked+span i {
+    color: #0055e3;
+}
+
+.task-list {
+    margin-top: 7.5rem;
+}
+
+.task-list h4 {
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 0px rgba(6, 0, 1, 0.11);
+    color: #252525;
+    padding-left: 3%;
+    line-height: 3;
+}
+
+.task-list ul {
+    margin: 0.5rem 0;
+}
+
+.task-list li {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 3%;
+    background: #f3f3f3;
+    border-radius: 2%;
+}
+
+.task-list li label {
+    /* display: block;
+          width: 100%; */
+}
+
+
+/* .task-list li label span {
+          float: right;
+      } */
+
+.task-list li.current {
+    border-left: 0.6rem solid #4b79cd;
+    background-color: #bee0f2;
+}
+
+
+/*违章举报*/
+
+.wzjb-bg {
+    background: url("../img/my-topbg.jpg") center top no-repeat #f3f3f3;
+    background-size: 100% auto;
+}
+
+.inforBox {
+    background-color: #f5f5f5;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 1rem 3%;
+    border-radius: 1rem;
+    padding: 0 3% 2rem;
+}
+
+.inforBox label,
+.my-list label {
+    display: block;
+    /* padding: 1.5rem 0 0.6rem; */
+}
+
+.inforBox label i {
+    display: inline-block;
+    width: 6%;
+    margin-left: 3%;
+    font-weight: bold;
+}
+
+.inforBox label i img {
+    height: 1.4rem;
+}
+
+.inforBox label i.red {
+    color: #ff0000;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 0px rgba(6, 0, 1, 0.11);
+    padding: 0.5rem;
+    border: 0;
+    line-height: 2;
+}
+
+.file {
+    display: inline-block;
+    width: 3.51rem;
+    text-align: center;
+    border: 1px dashed #cbcbcb;
+    /* padding: 0.4rem 0!important; */
+    overflow: hidden;
+    /* margin-top: 0.4rem; */
+    /* margin-left: 3%; */
+    height: 3.52rem;
+}
+
+.file img {
+    height: 3.5rem;
+    vertical-align: top;
+}
+
+.tj-btn {
+    display: block;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.tj-btn input {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    color: #fff;
+    background-color: #0183e1;
+    border: 0;
+    font-size: 1.6rem;
+    border-bottom: 3px solid #0063c8;
+    border-radius: 5rem;
+    line-height: 2;
+}
+
+
+/*我的*/
+
+.my-bg {
+    background: url("../img/my-topbg.jpg") center top no-repeat;
+    background-size: 100% auto;
+    padding-bottom: 5%;
+}
+
+.myself {
+    margin: 2% 8%;
+    display: block;
+    color: #fff;
+    line-height: 2;
+}
+
+.myself .fl h1 {
+    font-size: 1rem;
+}
+
+.myself .fl img {
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+.tx {
+    float: right;
+}
+
+.tx img {
+    width: 8rem;
+    border: 0.3rem solid #fff;
+    border-radius: 50%;
+    height: 8rem;
+}
+
+.my-list {
+    display: block;
+    margin: 2rem 3% 0;
+    margin-bottom: 3rem;
+}
+
+.my-list label {
+    color: #0083e1;
+    padding-top: 8%;
+}
+
+.my-list label img {
+    /* height: 2.4rem; */
+    /* margin-right: 0.6rem; */
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+/*业务详情*/
+
+.yewubg {
+    background: url("../img/yewubg.jpg") center top no-repeat #f3f3f3;
+    background-size: 100% auto;
+}
+
+.yw-nav {
+    display: block;
+    margin: 1rem 3%;
+}
+
+.yw-nav li {
+    display: inline-block;
+    width: 33.33%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 1.8rem 0;
+    margin-right: -0.3rem;
+}
+
+.yw-nav li.cli {
+    background: url("../img/yw-hover.png") center bottom no-repeat;
+    background-size: auto 1.4rem;
+}
+
+.yw-content {
+    display: block;
+    margin: 0 5%;
+}
+
+.yw-content li {
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 1rem 0;
+}
+
+.yw-content li span {
+    float: right;
+    color: #ff0000;
+}
+
+.yw-content li span.over {
+    color: #006ad1;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*用户详情页*/
+
+.usertop {
+    background: url("../img/usertopbg.jpg") center top no-repeat #f3f3f3;
+    background-size: 100% auto;
+    height: 7rem;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 10%;
+    z-index: 1;
+    top: 0;
+}
+
+.usertop .title {
+    border-bottom: 0;
+}
+
+.usertop .fr {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.6rem;
+}
+
+.usertop .fr i {
+    position: relative;
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+
+.usertop i b {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.6rem;
+    background-color: #002499;
+    color: #fff;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    line-height: 1;
+    font-weight: normal;
+    border-radius: 50%;
+}
+
+.userlist {
+    margin: 0 3%;
+    padding-bottom: 3rem;
+    margin-top: 7rem;
+}
+
+.userlist dt,
+.userlist dd {
+    width: 100%;
+    font-size: 0.75rem;
+}
+
+.userlist dt {
+    padding: 0.75rem 0 0.4rem;
+    /* line-height: 2.8rem; */
+    min-height: 2.8rem;
+}
+
+.userlist dt i {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.userlist dt img {
+    height: 1.6rem;
+}
+
+.userlist dd {
+    position: relative;
+}
+
+.samllTips {
+    line-height: 1.2rem;
+    font-size: 0.75rem;
+}
+
+.userlist input.xiala {
+    background: url("../img/xiala.png") right center no-repeat #fff;
+    background-size: contain;
+}
+
+.userlist .mint-button {
+    font-size: 0.875rem;
+}
+
+.select-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3.2rem;
+    z-index: 33;
+}
+
+.select-btn img {
+    height: 3.2rem;
+}
+
+.select-con {
+    display: none;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 3.2rem;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.select-con a {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    text-indent: 2rem;
+    color: #666666;
+}
+
+.radiobox {
+    position: relative;
+    padding-left: 8px;
+    margin-right: 1rem;
+}
+
+.radiobox:before {
+    content: "\2714";
+    display: inline-block;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #cdcdcd;
+    color: #fff;
+    text-align: center;
+    line-height: 1.4;
+}
+
+input[type="radio"]:checked:before {
+    content: "\2714";
+    display: inline-block;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #1ca6ff;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+}
+
+input[type="radio"] {
+    margin-right: 6px;
+}
+
+.user-tj {
+    display: block;
+    margin: 1.6rem 0;
+}
+
+.user-tj input {
+    border: 0;
+    display: block;
+    width: 70%;
+    text-align: center;
+    background-color: #0083e1;
+    color: #fff;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+.getCode {
+    position: absolute;
+    top: 0.4rem;
+    right: 7px;
+    background-color: #c7c7c7;
+    box-shadow: 1px 2px 2px 0px rgba(6, 0, 1, 0.28);
+    border-radius: 5px;
+    padding: 0 8px;
+    color: #fff;
+    line-height: 2;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #999;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #999;
+}
+
+.wrap1 {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    /*水平*/
+}
+
+.wrap2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /*垂直*/
+}
+
+.child1 {
+    -webkit-box-flex: 1;
+    -webkit-box-align: center;
+}
+
+.child2 {
+    -webkit-box-flex: 3;
+    -webkit-box-align: center;
+    width: 80%;
+}
+
+.mybox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fontBtn {
+    font-size: 0.875rem;
+    line-height: 2.5rem;
+}
+
+.modelTitleContent {
+    padding-top: 2%;
+    height: 85%;
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+}
+
+.modelTitleContenthasRadios {
+    height: 75%;
+}
+
+.modelWrap {
+    width: 95%;
+    line-height: 1.9rem;
+    padding-bottom: 23%;
+    min-height: 100%;
+    position: relative;
+}
+
+.modelTitle div {
+    line-height: 1.9rem;
+}
+
+.mint-msgbox {
+    border: 1px solid #ddd;
+    width: 80%;
+}
+
+.fixedBody {
+    position: fixed;
+    overflow: hidden;
+}
+
+
+/* 自抄表 */
+
+.selfWrap {
+    width: 100%;
+    min-height: 100%;
+    background: #f3f6f8;
+    position: absolute;
+}
+
+.selftop {
+    width: 100%;
+    height: 5.3rem;
+    background: url("../img/selfWrap.jpg") top center no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+.selfTitle {
+    height: 2.5rem;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.selfJiantou {
+    margin-right: 2rem;
+}
+
+input:disabled,
+input[disabled],
+textarea:disabled,
+textarea[disabled] {
+    color: #343434 !important;
+    opacity: 1;
+}
+
+.bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* dzht */
+
+.footerTask {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.cards {
+    /* main绝对定位，进行内部滚动 */
+    width: 100%;
+    top: 120px;
+    bottom: 55px;
+    position: absolute;
+    height: 100%;
+    padding-bottom: 2%;
+    /* 使之可以滚动 */
+    overflow-y: scroll;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /*垂直*/
+}
+
+
+/* input {
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          width: 76%;
+          height: 44px;
+          line-height: 42px;
+          padding-left: 10px;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+          -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      }
+       */
+
+input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.peoloeCard {
+    background: #f3f3f3;
+    margin-top: 3%;
+    padding: 3% 0;
+    border-radius: 2px;
+}
+
+.peoloeCard p {
+    line-height: 2rem;
+    height: 2rem;
+    color: #333;
+}

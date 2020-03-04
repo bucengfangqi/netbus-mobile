@@ -1,0 +1,70 @@
+import Vue from 'vue';
+import {
+    Button,
+    NavBar,
+    DropdownMenu,
+    DropdownItem,
+    SwitchCell,
+    List,
+    Sticky,
+    PullRefresh,
+    Cell,
+    CellGroup,
+    Picker,
+    Field,
+    Popup,
+    NumberKeyboard,
+    Calendar,
+    Tab,
+    Tabs,
+    Icon,
+    Switch,
+    Uploader,
+    Image,
+    ImagePreview,
+    RadioGroup,
+    Radio,
+    Notify,
+    Dialog,
+    ActionSheet,
+    Tag,
+    Col,
+    Row,
+    Form,
+    Step,
+    Steps
+} from 'vant';
+
+Vue.use(Button);
+Vue.use(NavBar);
+Vue.use(DropdownMenu);
+Vue.use(DropdownItem);
+Vue.use(SwitchCell);
+Vue.use(List);
+Vue.use(Sticky);
+Vue.use(PullRefresh);
+Vue.use(Cell);
+Vue.use(CellGroup);
+Vue.use(Picker);
+Vue.use(Field);
+Vue.use(Popup);
+Vue.use(NumberKeyboard);
+Vue.use(Calendar);
+Vue.use(Tab);
+Vue.use(Tabs);
+Vue.use(Icon);
+Vue.use(Switch);
+Vue.use(Uploader);
+Vue.use(Image);
+Vue.use(ImagePreview);
+Vue.use(RadioGroup);
+Vue.use(Radio);
+Vue.use(Notify);
+Vue.use(Dialog);
+Vue.use(ActionSheet);
+Vue.use(Tag);
+Vue.use(Col);
+Vue.use(Row);
+Vue.use(Form);
+Vue.use(Step);
+Vue.use(Steps);
