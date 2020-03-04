@@ -6,6 +6,7 @@ import store from './store'
 import "./plugins/vant";
 import "./plugins/axios";
 import "@/assets/lib/style.css";
+import "@/assets/config/changeTitle.js";
 
 Vue.config.productionTip = false
 

@@ -2051,9 +2051,9 @@ export default {
           this.$http
             .get('/mobile/menu/getMenu?source=' + source)
             .then(function(response) {
-              if (response.body.status == 1) {
-                this.menus = response.body.mapItems.busMenus
-                this.$store.commit('setmenus', response.body.mapItems.busMenus)
+              if (response.status == 1) {
+                this.menus = response.mapItems.busMenus
+                this.$store.commit('setmenus', response.mapItems.busMenus)
               }
             })
         }
