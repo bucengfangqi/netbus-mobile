@@ -15,12 +15,12 @@ const routes = [{
     name: 'form',
     component: () => import('../views/form.vue')
   },
-  // // 个人页面
-  // {
-  //   path: '/my',
-  //   name: 'my',
-  //   component: () => import('../views/my.vue')
-  // },
+  // 个人页面
+  {
+    path: '/my',
+    name: 'my',
+    component: () => import('../views/my.vue')
+  },
   // {
   //   path: '/record',
   //   name: 'record',

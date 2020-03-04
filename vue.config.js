@@ -15,6 +15,12 @@
         },
         "/config": {
           target: 'http://192.168.49.184/app/'
+        },
+        "/mobile": {
+          target: 'http://192.168.49.184/netbus'
+        },
+        "/sysparam": {
+          target: 'http://192.168.49.184/netbus'
         }
       }
     },

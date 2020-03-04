@@ -46,7 +46,11 @@
       "no-console": "off",
       "no-unused-vars": "off",
       "no-redeclare": "off",
-      "no-empty": "off"
+      "no-empty": "off",
+      "vue/require-v-for-key": "off",
+      "no-dupe-keys": "off",
+      "vue/no-dupe-keys": "off",
+      "vue/no-use-v-if-with-v-for": "off"
     }
   },
   "browserslist": [

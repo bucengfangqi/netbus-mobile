@@ -795,7 +795,8 @@ export default {
       urlHh: '', //二维码扫描户号
       fDataJson: {}, //全局配置
       activityArray: [], //活动数组
-      busHandleBeforeRemind: {} //控制先弹出空户须知还是绑定用户以及欠费检查
+      busHandleBeforeRemind: {}, //控制先弹出空户须知还是绑定用户以及欠费检查
+      label:null
     }
   },
   computed: {
